@@ -75,7 +75,7 @@ Page {
 
                 Text {
                     font.underline: false
-                    text: i18n.tr("Old Source code (0.10.1) available on ") + "<a style=\"text-decoration: none;\" href=\"https://github.com/cwayne18/ActivityTracker\">GitHub.com</a>"
+                    text: i18n.tr("Source code available on ") + "<a style=\"text-decoration: none;\" href=\"https://github.com/mymike00/ActivityTracker\">GitHub.com</a>"
                     font.pointSize: units.gu(1)
 
                     anchors.horizontalCenter: parent.horizontalCenter
