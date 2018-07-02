@@ -21,21 +21,9 @@ Page {
    }
    property var polyline;
    id: map
-   // WebView {
-   //    id: webView
-   //    url: "html/map.html?polyline="+polyline
-   //    anchors.fill: parent
-   // }
-   Label {
-      anchors {
-         top: parent.header.bottom
-         left: parent.left
-         right: parent.right
-         bottom: parent.bottom
-      }
-      text: i18n.tr("Work in progress")
-      font.pointSize: units.gu(2)
-      horizontalAlignment: Text.AlignHCenter
-      verticalAlignment: Text.AlignVCenter
+   WebView {
+      id: webView
+      url: "html/map.html?polyline="+polyline
+      anchors.fill: parent
    }
 }

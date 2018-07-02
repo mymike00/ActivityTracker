@@ -49,7 +49,7 @@ MainView {
    //keep screen on so we still get to read GPS
    ScreenSaver {
       id: screenSaver
-      screenSaverEnabled: !Qt.application.active
+      screenSaverEnabled: !am_running
    }
 
    function stopwatch(seconds) {
@@ -211,7 +211,7 @@ MainView {
          color: "transparent"
          EmptyState {
             title: i18n.tr("No saved activities")
-            iconSource: Qt.resolvedUrl("./images/runman.png")
+            iconSource: Qt.resolvedUrl("./images/runman.svg")
             subTitle: i18n.tr("Swipe up to log a new activity")
             anchors.centerIn: parent
          }
@@ -448,10 +448,13 @@ MainView {
                      OptionSelector {
                         id: os
                         text: i18n.tr("Activity Type")
-                        model: [i18n.tr("Run"),
-                        i18n.tr("Bike Ride"),
-                        i18n.tr("Walk"),
-                        i18n.tr("Hike")]
+                        expanded: true
+                        model: [
+                           i18n.tr("Run"),
+                           i18n.tr("Bike Ride"),
+                           i18n.tr("Walk"),
+                           i18n.tr("Hike")
+                        ]
                      }
                      Label {
                         text: "Name"
